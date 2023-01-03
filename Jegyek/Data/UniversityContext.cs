@@ -10,13 +10,11 @@ namespace Jegyek.Data
         public DbSet<User> Users { get; set; }
         public DbSet<CourseEnrollment> CourseEnrollments { get; set; }
 
-        public UniversityContext(DbContextOptions<UniversityContext> options) : base(options)
-        {
-
-        }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            
         }
     }
 }

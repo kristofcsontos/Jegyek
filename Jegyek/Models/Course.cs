@@ -10,7 +10,9 @@ namespace Jegyek.Models
         public string Name { get; set; }
         [Display(Name = "Kredit")]
         public int Credit { get; set; }
-        [Display(Name = "Jegy")]
+       [Display(Name = "Jegy")]
         public int Grade { get; set; }
-    }
+        [Display(Name = "Félév")]
+        public int Semester { get; set; }
+    } 
 }

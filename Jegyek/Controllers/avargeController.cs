@@ -16,15 +16,16 @@ namespace Jegyek.Controllers
         // GET: jegyekInfoes
         public async Task<IActionResult> Avarge()
         {
-            var grades = _context.Courses.ToList();
+            var courses =_context.Courses.ToList();
+            
 
             // összegzés a jegyek átlagának kiszámításához
-            double total = 0;
-            foreach (var grade in grades)
+            double totalGrade = 0;
+            foreach (var course in courses)
             {
-                total += grade.Grade;
+                totalGrade += course.Grade;
             }
-            double atlag = total / grades.Count;
+            double atlag = totalGrade / courses.Count;
             //ViewBag.Average = atlag;
             return View(atlag);
         }

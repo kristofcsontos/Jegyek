@@ -40,8 +40,10 @@ namespace Jegyek.Controllers
                     //Teljesített kredit
                     semesterKredit = semesterKredit + course.Credit;
                 }
+                //Göngyölt
                 curledCreditIndex = curledCreditIndex + (course.Credit * course.Grade);
                 curledGrade = curledGrade + course.Grade;
+                //Összes kredit
                 sumKredit = sumKredit + course.Credit;
             }
             ViewBag.CreditIndex = creditIndex / 30;
